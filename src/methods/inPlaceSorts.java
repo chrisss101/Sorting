@@ -1,7 +1,7 @@
 package methods;
 
 public class inPlaceSorts {
-    public void BubbleSort(int[] arr ) {
+    public static void BubbleSort(int[] arr ) {
         Boolean swappable = true;
         int place = 0;
         while (swappable == true) {
@@ -19,17 +19,17 @@ public class inPlaceSorts {
             }
         }
     }
-    public void InsertionSort(int[] arr ) {
+    public static void InsertionSort(int[] arr ) {
 
         for (int i = 1; i < arr.length;i++) {
             if (arr[i-1] > arr[i]) {
                 //int min = arr[i];
                 for (int j = i; j > 0;j--) {
 
-                    if ( arr[j-1] < arr[j]) {
-                        int place = arr[i-1];
-                        arr[j-1] = arr[i];
-                        arr[i] = place;
+                    if ( arr[j-1] > arr[j]) {
+                        int place = arr[j-1];
+                        arr[j-1] = arr[j];
+                        arr[j] = place;
                     }
                 }
             }
@@ -37,7 +37,7 @@ public class inPlaceSorts {
 
         }
     }
-    public void SelectionSort(int[] arr ) {
+    public static void SelectionSort(int[] arr ) {
         int place = 0;
         int min = 0;
         for (int i = 0; i < arr.length; i++) {
