@@ -42,7 +42,8 @@ public class inPlaceSorts {
         int min = 0;
         for (int i = 0; i < arr.length; i++) {
             place = i;
-            for (int j = 0; j < arr.length - place; j++) {
+            for (int j = place; j < arr.length; j++) {
+                min = place;
                 if (arr[j] < arr[i]) {
                     min = j;
                 }
